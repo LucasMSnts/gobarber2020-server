@@ -23,7 +23,7 @@ export default class CreateAppointments1588807112036
           },
           {
             name: 'date',
-            type: 'timestamp with time zone',
+            type: 'timestamp with time zone', // Só funciona no Postgres
             isNullable: false,
           },
         ],
