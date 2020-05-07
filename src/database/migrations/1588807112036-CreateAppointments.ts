@@ -15,6 +15,7 @@ export default class CreateAppointments1588807112036
             type: 'varchar',
             isPrimary: true,
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()', // postgres
           },
           {
             name: 'provider',
