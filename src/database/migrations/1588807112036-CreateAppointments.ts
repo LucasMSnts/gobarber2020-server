@@ -12,7 +12,7 @@ export default class CreateAppointments1588807112036
         columns: [
           {
             name: 'id',
-            type: 'varchar',
+            type: 'uuid', // postgres
             isPrimary: true,
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()', // postgres
