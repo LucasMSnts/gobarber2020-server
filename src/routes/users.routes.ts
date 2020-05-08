@@ -16,6 +16,8 @@ usersRouter.post('/', async (request, response) => {
       password,
     });
 
+    delete user.password; // Não é recomendado voltar a senha
+
     return response.json(user);
   } catch (err) {
     return response.status(400).json({ error: err.message });
