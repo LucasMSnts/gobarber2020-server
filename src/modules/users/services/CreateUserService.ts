@@ -12,9 +12,6 @@ interface IRequest {
   password: string;
 }
 
-// S - Single Responsalitity Principle
-// D - Depency Inversion Principle
-
 @injectable()
 class CreateUserService {
   constructor(
