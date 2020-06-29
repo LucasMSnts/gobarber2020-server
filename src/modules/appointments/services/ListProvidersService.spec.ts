@@ -34,14 +34,6 @@ describe('ListProviders', () => {
       user_id: loggedUser.id,
     });
 
-    expect(providers).toEqual([user1, user2]); // 15:00
+    expect(providers).toEqual([user1, user2]);
   });
-
-  // it('should not be able to show the profile from non-existing user', async () => {
-  //   expect(
-  //     showProfile.execute({
-  //       user_id: 'non-existing-user-id',
-  //     })
-  //   ).rejects.toBeInstanceOf(AppError);
-  // });
 });
