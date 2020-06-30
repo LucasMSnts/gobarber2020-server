@@ -5,13 +5,8 @@ import { container } from 'tsyringe';
 import CreateAppointmentService from '@modules/appointments/services/CreateAppointmentService';
 
 export default class AppointmentController {
-  // public async show(request: Request, response: Response): Promise<Response> {
-  //   const appointments = await appointmentsRepository.find();
-
-  //   return response.json(appointments);
-  // }
-
   public async create(request: Request, response: Response): Promise<Response> {
+    const user_id = request.user.id;
     const { provider_id, date } = request.body;
 
     const parsedDate = parseISO(date);
@@ -21,6 +16,7 @@ export default class AppointmentController {
     const appointment = await createAppointment.execute({
       date: parsedDate,
       provider_id,
+      user_id,
     });
 
     return response.json(appointment);
